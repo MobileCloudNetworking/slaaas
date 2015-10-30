@@ -2,10 +2,10 @@
     "service_type": "http://schemas.mobile-cloud-networking.eu/occi/sm#sla",
     "service_description": "SLA service",
     "service_attributes": {
-      "mcn.endpoint.mon": "",
+      "mcn.endpoint.maas": "",
       "mcn.endpoint.rcb.mq": "",
       "mcn.endpoint.mgt.sla": "immutable"
     },
-    "service_endpoint": "http://sla.cloudcomplab.ch:8888/sla/",
+    "service_endpoint": "http://sla.cloudcomplab.ch:8895/sla/",
     "depends_on": []
 }

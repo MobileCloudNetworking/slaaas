@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 #   Copyright (c) 2013-2015, Intel Performance Learning Solutions Ltd, Intel Corporation.
-#   Copyright 2015 Zuercher Hochschule fuer Angewandte Wissenschaften
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -57,8 +56,8 @@ class MyBackend(occi_ext.Backend):
 
     def update(self, old, new, extras):
         # TODO: attributes would need to be defined by a mixin.
-        old.attributes.update(new.attributes)
-        self.so.so_e.update(old, new, extras)
+        #old.attributes.update(new.attributes)
+        self.so.so_e.update(True, new.attributes)
 
     def delete(self, entity, extras):
         self.so.so_e.dispose()
@@ -66,19 +65,16 @@ class MyBackend(occi_ext.Backend):
     # Actions
 
     def deploy_me(self, entity, attributes, extras):
-        self.so.so_e.deploy()
+        self.so.so_e.deploy(attributes)
         entity.actions = [occi_ext.PROVISION_ACTION]
 
     def provision_me(self, entity, attributes, extras):
-        self.so.so_e.provision()
+        self.so.so_e.provision(attributes)
         entity.actions = []
 
 application = occi_ext.Application(MyBackend())
 
-#
-# Below for testing only
-# TODO replace with tornado
-#
+
 if __name__ == '__main__':
     from wsgiref.simple_server import make_server
     # OpSV3 needs process to listen on a public interface, use 0.0.0.0
