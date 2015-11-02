@@ -127,8 +127,11 @@ class SOE(service_orchestrator.Execution):
         Update SICs.
         """
         LOG.info('Executing update logic ...')
+
+        ## TO DELETE. // Just used to test and send some IPs to the template generator!
         self.maas_endpoint = "10.10.10.10"
         self.rcb_mq_endpoint = "192.168.1.200"
+        ##
 
         if attributes:
 

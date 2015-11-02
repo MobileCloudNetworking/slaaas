@@ -151,7 +151,7 @@ class SLAaaSTemplateGenerator(object):
             template += '          #!/bin/bash\n'
             template += '          /bin/sed -i -- "s/zabbix_server=.*/zabbix_server=$maas_ip/g" /home/ubuntu/slaaas/configs/maas.cfg\n'
             template += '          /bin/sed -i -- "s/host=..*/host=.$rcb_mq_ip/g" /home/ubuntu/slaaas/configs/rabbit.cfg\n'
-            template += '          /bin/nohup  sh /home/ubuntu/slaaas/restart_slaaas.sh &\n'
+            template += '          /bin/sed -i -e '"'$i \* *     * * *   root  cd /home/ubuntu/slaaas/ && nohup python /home/ubuntu/slaaas/runme.py > /home/ubuntu/slaaas/logs/slaaas_info.log & '"' /etc/crontab\n'
             template += '      group: script\n'
             template += '      inputs: \n'
             template += '        - \n'

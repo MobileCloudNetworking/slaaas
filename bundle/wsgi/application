@@ -83,28 +83,3 @@ if __name__ == '__main__':
     # Wait for a single request, serve it and quit.
     httpd.serve_forever()
 
-# import requests
-#
-# token = ''
-#
-# heads = {'X-Auth-Token':token, 'X-Tenant-Name':'edmo', 'Content-Type':'text/occi', 'Accept':'text/occi'}
-#
-# r = requests.get('http://127.0.0.1:8051/-/', headers=heads)
-#
-# heads['Category']='orchestrator; scheme="http://schemas.mobile-cloud-networking.eu/occi/service#"'
-# r = requests.put('http://127.0.0.1:8051/orchestrator/default', headers=heads)
-#
-# r = requests.get('http://127.0.0.1:8051/orchestrator/default', headers=heads)
-#
-# heads['Category']='deploy; scheme="http://schemas.mobile-cloud-networking.eu/occi/service#"'
-# r = requests.post('http://127.0.0.1:8051/orchestrator/default?action=deploy', headers=heads)
-#
-# r = requests.get('http://127.0.0.1:8051/orchestrator/default', headers=heads); r.headers
-#
-# heads['Category']='provision; scheme="http://schemas.mobile-cloud-networking.eu/occi/service#"'
-# r = requests.post('http://127.0.0.1:8051/orchestrator/default?action=provision', headers=heads)
-#
-# heads['X-OCCI-Attribute']='mcn.endpoint.mme-pgwc-sgwc="123.123.123.123"'
-# r = requests.post('http://127.0.0.1:8051/orchestrator/default', headers=heads)
-#
-# r = requests.delete('http://127.0.0.1:8051/orchestrator/default', headers=heads)
