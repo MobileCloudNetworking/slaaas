@@ -4,7 +4,7 @@
     "service_attributes": {
       "mcn.endpoint.maas": "",
       "mcn.endpoint.rcb.mq": "",
-      "mcn.endpoint.mgt.sla": "immutable"
+      "mcn.endpoint.slaaas": "immutable"
     },
     "service_endpoint": "http://sla.cloudcomplab.ch:8895/sla",
     "depends_on": []
