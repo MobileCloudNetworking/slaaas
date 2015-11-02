@@ -6,6 +6,6 @@
       "mcn.endpoint.rcb.mq": "",
       "mcn.endpoint.mgt.sla": "immutable"
     },
-    "service_endpoint": "http://sla.cloudcomplab.ch:8895/sla/",
+    "service_endpoint": "http://sla.cloudcomplab.ch:8895/sla",
     "depends_on": []
 }
